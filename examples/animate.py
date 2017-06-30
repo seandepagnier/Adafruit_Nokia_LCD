@@ -31,10 +31,17 @@ from PIL import ImageDraw
 
 
 # Raspberry Pi hardware SPI config:
-DC = 23
-RST = 24
-SPI_PORT = 0
+DC = 22
+RST = 18
+SPI_PORT = 0 # 1 for OrangePI
 SPI_DEVICE = 0
+
+# Raspberry Pi software SPI config:
+SCLK =23
+DIN = 19
+# DC = 22
+# RST = 18
+CS = 24
 
 # Beaglebone Black hardware SPI config:
 # DC = 'P9_15'

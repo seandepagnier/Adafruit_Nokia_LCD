@@ -57,7 +57,7 @@ class PCD8544(object):
 		self._spi = spi
 		# Default to detecting platform GPIO.
 		if self._gpio is None:
-			self._gpio = GPIO.get_platform_gpio()
+			self._gpio = GPIO.get_platform_gpio(mode='board')
 		if self._rst is not None:
 			self._gpio.setup(self._rst, GPIO.OUT)
 		# Default to bit bang SPI.
